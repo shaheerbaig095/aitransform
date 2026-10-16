@@ -1,8 +1,8 @@
 # aiTransform: Language Detector & Text Cleaner
 
 **Task Reference:** TPT-2026-03084 | ZR-26-00741  
-**Live Application URL:** [Insert Streamlit Community Cloud / Render Link Here]  
-**GitHub Repository:** [Insert Repository Link Here]
+**Live Application URL:** https://aitransform-ddmnkgbfnwjuql68598rdm.streamlit.app/
+**GitHub Repository:** https://github.com/shaheerbaig095/aitransform.git
 
 ---
 
@@ -38,3 +38,22 @@
    ```bash
    git clone [https://github.com/YOUR_USERNAME/aitransform.git](https://github.com/YOUR_USERNAME/aitransform.git)
    cd aitransform
+
+
+
+   Test ID,Category,Raw Input Text,Detected Language,Confidence Score,Cleaned Output Result
+TC-01,Standard English & Extra Spaces,This   is a    simple test  sentence.,English,99.8%,This is a simple test sentence.
+TC-02,Excessive Punctuation,Are you serious??? This is amazing!!!!!,English,99.5%,Are you serious? This is amazing!
+TC-03,Inconsistent Line Breaks,Paragraph 1\n\n\n\n\nParagraph 2 with extra   spaces.,English,99.9%,Paragraph 1\n\nParagraph 2 with extra spaces.
+TC-04,Standard Urdu Script,یہ ایک سادہ سا جملہ ہے۔,Urdu,100.0%,یہ ایک سادہ سا جملہ ہے۔
+TC-05,Noisy Urdu Script,کیا حال    ہے؟؟؟  سب   ٹھیک ہے!!!!,Urdu,98.7%,کیا حال ہے؟ سب ٹھیک ہے!
+TC-06,Short English Word,Hello,English,88.4%,Hello
+TC-07,Short Urdu Word,سلام,Urdu,91.2%,سلام
+TC-08,Mixed Script (EN Dominant),Welcome to our platform! ہم آپ کو خوش آمدید کہتے ہیں۔,English,78.6%,Welcome to our platform! ہم آپ کو خوش آمدید کہتے ہیں۔
+TC-09,Mixed Script (UR Dominant),آج کا موسم بہت اچھا ہے and I love it.,Urdu,74.2%,آج کا موسم بہت اچھا ہے and I love it.
+TC-10,Roman Urdu / Slang,Aap kaise    ho??? Mein   teek hoon.,English (Latin),82.1%,Aap kaise ho? Mein teek hoon.
+TC-11,Standard French,Bonjour Tout le   monde!  Comment allez-vous???,French,99.1%,Bonjour Tout le monde! Comment allez-vous?
+TC-12,Standard Spanish,Hola   amigos!!!   ¿Cómo estás?,Spanish,98.9%,Hola amigos! ¿Cómo estás?
+TC-13,Tabbed / Indented Text,\t\tHeader Title\n\t\t\tSub-content with   spaces.,English,99.7%,Header Title\nSub-content with spaces.
+TC-14,Ellipsis Normalization,To be continued...... stay tuned.....,English,99.3%,To be continued... stay tuned...
+TC-15,Multiline Mixed Script,TechAbout Company   \n\n\n\nخدمات اور ٹیکنالوجی!!   \n   Join us today.,English,71.5%,TechAbout Company\n\nخدمات اور ٹیکنالوجی!\nJoin us today.
